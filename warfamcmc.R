@@ -29,7 +29,7 @@ saemix.model<-saemixModel(model=model1cpt,description="warfarin",psi0=matrix(c(1
   covariance.model=matrix(c(1,0,0,0,1,0,0,0,1),ncol=3, 
   byrow=TRUE))
 
-L_mcmc=100
+L_mcmc=100 #number of MCMC transitions
 options.mcmc<-list(seed=39546,L_mcmc=L_mcmc,nbiter.mcmc = c(2,2,2,0),nb.chains=1)
 states.ref<-mcmc(saemix.model,saemix.data,options.mcmc)$eta
 
